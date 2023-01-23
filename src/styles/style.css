@@ -38,7 +38,7 @@ body {
   border-radius: 15px;
 }
 .profile__user-box {
-  background: #5747ea;
+  background-color: #5747ea;
   border-radius: 15px;
   padding: 32px 39px 32px 29px;
   display: flex;
@@ -72,8 +72,13 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #7078c9;
+  transition: color 0.15s;
+  cursor: pointer;
 }
 .profile__btn--active {
+  color: #ffffff;
+}
+.profile__btn:hover {
   color: #ffffff;
 }
 
@@ -90,15 +95,32 @@ body {
   position: absolute;
   z-index: 2.5;
 }
+.card__bg-icon--work {
+  top: -11px;
+  right: 17.4px;
+}
+.card__bg-icon--play {
+  top: -14.4px;
+  right: 11px;
+}
+.card__bg-icon--study {
+  top: -6px;
+  right: 17px;
+}
+.card__bg-icon--exercise {
+  top: -0.4px;
+  right: 17.6px;
+}
+.card__bg-icon--social {
+  top: -15px;
+  right: 13.5px;
+}
+.card__bg-icon--self-care {
+  top: -13px;
+  right: 7.2px;
+}
 .card__wrapper {
   margin-bottom: 81px;
-}
-.card__box {
-  border-radius: 15px;
-  padding: 28px 24px;
-  background-color: #1c204b;
-  position: relative;
-  z-index: 5;
 }
 .card--work {
   background-color: #ff8b64;
@@ -118,10 +140,40 @@ body {
 .card--self-care {
   background-color: #f1c75b;
 }
-
-.card__bg-icon:nth-child(1) {
-  right: -10px;
-  top: -10px;
+.card__box {
+  border-radius: 15px;
+  padding: 28px 24px;
+  background-color: #1c204b;
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+.card__box:hover {
+  background-color: #33397a;
+}
+.card__box div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card__box div:nth-child(1) {
+  margin-bottom: 6px;
+}
+.card__title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+}
+.card__time {
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 38px;
+}
+.card__last-week {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
 }
 
 /*# sourceMappingURL=style.css.map */

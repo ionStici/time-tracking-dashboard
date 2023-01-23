@@ -4,24 +4,47 @@
     padding-top: 38px;
     margin-top: 24px;
     border-radius: 15px;
+
     position: relative;
     overflow: hidden;
 
     &__bg-icon {
         position: absolute;
         z-index: 2.5;
+
+        &--work {
+            top: -11px;
+            right: 17.4px;
+        }
+
+        &--play {
+            top: -14.4px;
+            right: 11px;
+        }
+
+        &--study {
+            top: -6px;
+            right: 17px;
+        }
+
+        &--exercise {
+            top: -0.4px;
+            right: 17.6px;
+        }
+
+        &--social {
+            top: -15px;
+            right: 13.5px;
+        }
+
+        &--self-care {
+            top: -13px;
+            right: 7.2px;
+        }
     }
 
     &__wrapper {
         margin-bottom: 81px;
-    }
-
-    &__box {
-        border-radius: 15px;
-        padding: 28px 24px;
-        background-color: #1c204b;
-        position: relative;
-        z-index: 5;
     }
 
     &--work {
@@ -47,9 +70,47 @@
     &--self-care {
         background-color: #f1c75b;
     }
-}
 
-.card__bg-icon:nth-child(1) {
-    right: -10px;
-    top: -10px;
+    &__box {
+        border-radius: 15px;
+        padding: 28px 24px;
+        background-color: #1c204b;
+        position: relative;
+        z-index: 5;
+
+        cursor: pointer;
+        transition: background-color 0.15s;
+
+        &:hover {
+            background-color: #33397a;
+        }
+    }
+
+    &__box div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__box div:nth-child(1) {
+        margin-bottom: 6px;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    &__time {
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    &__last-week {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+    }
 }
