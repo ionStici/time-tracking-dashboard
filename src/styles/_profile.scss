@@ -1,0 +1,58 @@
+.profile {
+    max-width: 500px;
+    margin: 0 auto;
+
+    background: #1c204b;
+    border-radius: 15px;
+
+    &__user-box {
+        background: #5747ea;
+        border-radius: 15px;
+        padding: 32px 39px 32px 29px;
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__img {
+        width: 70px;
+        height: 70px;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        margin-right: 17px;
+    }
+
+    .text {
+        margin-bottom: 4px;
+    }
+
+    &__name {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    //
+
+    &__buttons {
+        border-radius: 15px;
+
+        display: flex;
+        justify-content: space-around;
+        padding: 24px 0 25px 0;
+    }
+
+    &__btn {
+        border: none;
+        background-color: transparent;
+
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: #7078c9;
+
+        &--active {
+            color: #ffffff;
+        }
+    }
+}

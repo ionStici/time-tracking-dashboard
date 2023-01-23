@@ -11,17 +11,137 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Time tracking dashboard</title>
 
-  <link rel="stylesheet" href="./src/sass/style.css">
+  <link rel="stylesheet" href="./src/styles/style.css">
   <script type="module" src="./src/js/index.js"></script>
 </head>
 <body>
 
-  Report for
-  Jeremy Robson
+    <main class="main">
+        <section class="dashboard">
+            <div class="profile">
+                <div class="profile__user-box">
+                    <img class="profile__img" src="./src/images/image-jeremy.png" alt="User's Picture">
 
-  Daily
-  Weekly
-  Monthly
+                    <div>
+                        <p class="text">Report for</p>
+                        <p class="profile__name">Jeremy Robson</p>
+                    </div>
+                </div>
+
+                <div class="profile__buttons">
+                    <button class="profile__btn">Daily</button>
+                    <button class="profile__btn profile__btn--active">Weekly</button>
+                    <button class="profile__btn">Monthly</button>
+                </div>
+            </div>
+
+            <div class="card__wrapper">
+
+
+                <div class="card card--work">
+                    <img class="card__bg-icon" src="./src/images/icon-work.svg" alt="">
+                    <div class="card__box">
+                        <div>
+                            <p>Work</p>
+                            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+                        </div>
+                        <div>
+                            <p>32hrs</p>
+                            <p>Last Week - 36hrs</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="card card--play">
+                    <img class="card__bg-icon" src="./src/images/icon-play.svg" alt="">
+                    <div class="card__box">
+                        <div>
+                            <p></p>
+                            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+                        </div>
+                        <div>
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="card card--study">
+                    <img class="card__bg-icon" src="./src/images/icon-study.svg" alt="">
+                    <div class="card__box">
+                        <div>
+                            <p></p>
+                            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+                        </div>
+                        <div>
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="card card--exercise">
+                    <img class="card__bg-icon" src="./src/images/icon-exercise.svg" alt="">
+                    <div class="card__box">
+                        <div>
+                            <p></p>
+                            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+                        </div>
+                        <div>
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="card card--social">
+                    <img class="card__bg-icon" src="./src/images/icon-social.svg" alt="">
+                    <div class="card__box">
+                        <div>
+                            <p></p>
+                            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+                        </div>
+                        <div>
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="card card--self-care">
+                    <img class="card__bg-icon" src="./src/images/icon-self-care.svg" alt="">
+                    <div class="card__box">
+                        <div>
+                            <p></p>
+                            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+                        </div>
+                        <div>
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+
+<br>
+<br>
+<br>
+<br>
+<br>
 
   Work
   5hrs <!-- daily -->

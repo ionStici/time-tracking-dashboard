@@ -1,0 +1,55 @@
+.card {
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 38px;
+    margin-top: 24px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+
+    &__bg-icon {
+        position: absolute;
+        z-index: 2.5;
+    }
+
+    &__wrapper {
+        margin-bottom: 81px;
+    }
+
+    &__box {
+        border-radius: 15px;
+        padding: 28px 24px;
+        background-color: #1c204b;
+        position: relative;
+        z-index: 5;
+    }
+
+    &--work {
+        background-color: #ff8b64;
+    }
+
+    &--play {
+        background-color: #55c2e6;
+    }
+
+    &--study {
+        background-color: #ff5e7d;
+    }
+
+    &--exercise {
+        background-color: #4bcf82;
+    }
+
+    &--social {
+        background-color: #7335d2;
+    }
+
+    &--self-care {
+        background-color: #f1c75b;
+    }
+}
+
+.card__bg-icon:nth-child(1) {
+    right: -10px;
+    top: -10px;
+}
