@@ -8,6 +8,11 @@
     position: relative;
     overflow: hidden;
 
+    @media only screen and (min-width: 1150px) {
+        padding-top: 45px;
+        margin: 0;
+    }
+
     &__bg-icon {
         position: absolute;
         z-index: 2.5;
@@ -45,6 +50,17 @@
 
     &__wrapper {
         margin-bottom: 81px;
+
+        @media only screen and (min-width: 1150px) {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            margin-bottom: 0;
+
+            display: grid;
+            gap: 30px;
+            grid-template-columns: repeat(3, 255px);
+            grid-template-rows: 244px 244px;
+        }
     }
 
     &--work {
@@ -84,6 +100,11 @@
         &:hover {
             background-color: #33397a;
         }
+
+        @media only screen and (min-width: 1150px) {
+            padding: 29px 30px 32px 30px;
+            height: 100%;
+        }
     }
 
     &__box div {
@@ -94,6 +115,17 @@
 
     &__box div:nth-child(1) {
         margin-bottom: 6px;
+
+        @media only screen and (min-width: 1150px) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__box div:nth-child(2) {
+        @media only screen and (min-width: 1150px) {
+            align-items: flex-start;
+            flex-direction: column;
+        }
     }
 
     &__title {
@@ -106,11 +138,11 @@
         font-weight: 300;
         font-size: 32px;
         line-height: 38px;
-    }
 
-    &__last-week {
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 18px;
+        @media only screen and (min-width: 1150px) {
+            font-size: 56px;
+            line-height: 66px;
+            margin-bottom: 8px;
+        }
     }
 }

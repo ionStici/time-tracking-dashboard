@@ -5,6 +5,11 @@
     background: #1c204b;
     border-radius: 15px;
 
+    @media only screen and (min-width: 1150px) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
     &__user-box {
         background-color: #5747ea;
         border-radius: 15px;
@@ -12,6 +17,13 @@
 
         display: flex;
         align-items: center;
+
+        @media only screen and (min-width: 1150px) {
+            padding: 37px 32px;
+            height: 354px;
+            align-items: flex-start;
+            flex-direction: column;
+        }
     }
 
     &__img {
@@ -20,16 +32,32 @@
         border: 3px solid #fff;
         border-radius: 50%;
         margin-right: 17px;
+
+        @media only screen and (min-width: 1150px) {
+            width: 84px;
+            height: 84px;
+            margin-right: 0;
+            margin-bottom: 40px;
+        }
     }
 
     .text {
         margin-bottom: 4px;
+
+        @media only screen and (min-width: 1150px) {
+            margin-bottom: 3px;
+        }
     }
 
     &__name {
         font-weight: 300;
         font-size: 24px;
         line-height: 28px;
+
+        @media only screen and (min-width: 1150px) {
+            font-size: 40px;
+            line-height: 47px;
+        }
     }
 
     //
@@ -40,6 +68,12 @@
         display: flex;
         justify-content: space-around;
         padding: 24px 0 25px 0;
+
+        @media only screen and (min-width: 1150px) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 26px 0 32px 32px;
+        }
     }
 
     &__btn {
@@ -59,6 +93,12 @@
 
         &:hover {
             color: #ffffff;
+        }
+    }
+
+    &__btn:not(:last-child) {
+        @media only screen and (min-width: 1150px) {
+            margin-bottom: 21px;
         }
     }
 }
