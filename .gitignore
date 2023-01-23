@@ -1,0 +1,13 @@
+*.sketch
+*.xd
+*.fig
+
+.DS_Store
+thumbs.db
+node_modules
+
+.prettierignore
+.prettierrc
+
+style.css.map
+package-lock.json
