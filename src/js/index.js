@@ -45,3 +45,16 @@
 // Previous - 2hrs <!-- weekly -->
 // 7hrs <!-- monthly -->
 // Previous - 11hrs <!-- monthly -->
+
+const container = document.querySelector(".card__wrapper");
+
+const titleEls = document.querySelectorAll(".card__title");
+const timeEls = document.querySelectorAll(".card__time");
+const prevTimeEls = document.querySelectorAll(".card__prev-time");
+
+const getData = async function () {
+    const res = await fetch("./../../data.json");
+    const data = await res.json();
+};
+
+getData();

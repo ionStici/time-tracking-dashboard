@@ -151,45 +151,12 @@ body {
 .card {
   max-width: 500px;
   margin: 0 auto;
-  padding-top: 38px;
-  margin-top: 24px;
-  border-radius: 15px;
-  position: relative;
-  overflow: hidden;
 }
 @media only screen and (min-width: 1150px) {
   .card {
-    padding-top: 45px;
-    margin: 0;
+    max-width: revert;
+    width: 100%;
   }
-}
-.card__bg-icon {
-  position: absolute;
-  z-index: 2.5;
-}
-.card__bg-icon--work {
-  top: -11px;
-  right: 17.4px;
-}
-.card__bg-icon--play {
-  top: -14.4px;
-  right: 11px;
-}
-.card__bg-icon--study {
-  top: -6px;
-  right: 17px;
-}
-.card__bg-icon--exercise {
-  top: -0.4px;
-  right: 17.6px;
-}
-.card__bg-icon--social {
-  top: -15px;
-  right: 13.5px;
-}
-.card__bg-icon--self-care {
-  top: -13px;
-  right: 7.2px;
 }
 .card__wrapper {
   margin-bottom: 81px;
@@ -203,6 +170,19 @@ body {
     gap: 30px;
     grid-template-columns: repeat(3, 255px);
     grid-template-rows: 244px 244px;
+  }
+}
+.card__top {
+  height: 62px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: relative;
+  bottom: -24px;
+  overflow: hidden;
+}
+@media only screen and (min-width: 1150px) {
+  .card__top {
+    bottom: 0;
   }
 }
 .card--work {
@@ -223,6 +203,34 @@ body {
 .card--self-care {
   background-color: #f1c75b;
 }
+.card__bg-icon {
+  position: absolute;
+  z-index: 2.5;
+}
+.card__bg-icon--work {
+  top: -11px;
+  right: 17.4px;
+}
+.card__bg-icon--play {
+  top: -5px;
+  right: 20px;
+}
+.card__bg-icon--study {
+  top: -6px;
+  right: 20px;
+}
+.card__bg-icon--exercise {
+  top: -0.4px;
+  right: 20px;
+}
+.card__bg-icon--social {
+  top: -15px;
+  right: 13.5px;
+}
+.card__bg-icon--self-care {
+  top: -13px;
+  right: 15px;
+}
 .card__box {
   border-radius: 15px;
   padding: 28px 24px;
@@ -237,8 +245,8 @@ body {
 }
 @media only screen and (min-width: 1150px) {
   .card__box {
-    padding: 29px 30px 32px 30px;
-    height: 100%;
+    margin-top: -17px;
+    padding: 30px 30px 32px 30px;
   }
 }
 .card__box div {
