@@ -26,21 +26,21 @@ body {
   color: #bbc0ff;
 }
 
-@media only screen and (min-width: 1150px) {
-  .main {
-    margin-top: 221px;
-    margin-bottom: 221px;
-  }
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .dashboard {
   margin-top: 81px;
   padding: 0 24px;
+  width: 100%;
 }
 @media only screen and (min-width: 1150px) {
   .dashboard {
     max-width: 1110px;
-    margin: 0 auto;
     display: grid;
     justify-content: center;
     gap: 30px;

@@ -1,60 +1,42 @@
-// Work
-// 5hrs <!-- daily -->
-// Previous - 7hrs <!-- daily -->
-// 32hrs <!-- weekly -->
-// Previous - 36hrs <!-- weekly -->
-// 103hrs <!-- monthly -->
-// Previous - 128hrs <!-- monthly -->
-
-// Play
-// 1hr <!-- daily -->
-// Previous - 2hrs <!-- daily -->
-// 10hrs <!-- weekly -->
-// Previous - 8hrs <!-- weekly -->
-// 23hrs <!-- monthly -->
-// Previous - 29hrs <!-- monthly -->
-
-// Study
-// 0hrs <!-- daily -->
-// Previous - 1hr <!-- daily -->
-// 4hrs <!-- weekly -->
-// Previous - 7hrs <!-- weekly -->
-// 13hrs <!-- monthly -->
-// Previous - 19hrs <!-- monthly -->
-
-// Exercise
-// 1hr <!-- daily -->
-// Previous - 1hr <!-- daily -->
-// 4hrs <!-- weekly -->
-// Previous - 5hrs <!-- weekly -->
-// 11hrs <!-- monthly -->
-// Previous - 18hrs <!-- monthly -->
-
-// Social
-// 1hr <!-- daily -->
-// Previous - 3hrs <!-- daily -->
-// 5hrs <!-- weekly -->
-// Previous - 10hrs <!-- weekly -->
-// 21hrs <!-- monthly -->
-// Previous - 23hrs <!-- monthly -->
-
-// Self Care
-// 0hrs <!-- daily -->
-// Previous - 1hr <!-- daily -->
-// 2hrs <!-- weekly -->
-// Previous - 2hrs <!-- weekly -->
-// 7hrs <!-- monthly -->
-// Previous - 11hrs <!-- monthly -->
-
-const container = document.querySelector(".card__wrapper");
-
-const titleEls = document.querySelectorAll(".card__title");
 const timeEls = document.querySelectorAll(".card__time");
 const prevTimeEls = document.querySelectorAll(".card__prev-time");
+const btns = document.querySelectorAll(".profile__btn");
+const btnsContainer = document.querySelector(".profile__buttons");
+const activeBtnClass = "profile__btn--active";
+
+let timeframes;
 
 const getData = async function () {
     const res = await fetch("./../../data.json");
     const data = await res.json();
+    timeframes = data.map((obj, i) => obj.timeframes);
+};
+getData();
+
+const removeActiveBtn = function () {
+    btns.forEach((btn) => {
+        btn.classList.remove(activeBtnClass);
+    });
 };
 
-getData();
+const renderData = function (btn, period) {
+    removeActiveBtn();
+    btn.classList.add(activeBtnClass);
+    let data;
+
+    if (period === "Daily") data = timeframes.map((d) => d.daily);
+    if (period === "Weekly") data = timeframes.map((d) => d.weekly);
+    if (period === "Monthly") data = timeframes.map((d) => d.monthly);
+
+    timeEls.forEach((el, i) => (el.textContent = `${data[i].current}hrs`));
+    prevTimeEls.forEach(
+        (el, i) => (el.textContent = `Last Day - ${data[i].previous}hrs`)
+    );
+};
+
+btnsContainer.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("profile__btn")) return;
+    if (e.target.textContent === "Daily") renderData(e.target, "Daily");
+    if (e.target.textContent === "Weekly") renderData(e.target, "Weekly");
+    if (e.target.textContent === "Monthly") renderData(e.target, "Monthly");
+});
