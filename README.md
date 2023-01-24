@@ -2,6 +2,16 @@
 
 This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw).
 
+| **Links** | [Solution URL](https://github.com/ionStici/time-tracking-dashboard-fem) | [Live Site URL](https://ionstici.github.io/time-tracking-dashboard-fem) |
+| --------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+
+| **Author** | [GitHub](https://github.com/ionStici) | [FE Mentor](https://www.frontendmentor.io/profile/ionStici) | [Twitter](https://twitter.com/ionStici_) |
+| ---------- | ------------------------------------- | ----------------------------------------------------------- | ---------------------------------------- |
+
+<br>
+
+![](./src/images/screenshot.png)
+
 <!-- ### Primary
 
 - Blue: hsl(246, 80%, 60%)
